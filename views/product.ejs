@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+    <div class="row">
+        <h1><%= title %></h1>
+        <p><%= content %></p>
+        <div class="product-box">
+            <% products.forEach(pro => { %>
+                <div class="product">
+                    <img src="/img/<%= pro.img %>" alt="">
+                    <a href="#"><%= pro.name %></a>
+                    <p>Giá: <%= pro.price %></p>
+                    <button>Đặt hàng</button>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+<%- include('partials/footer') %>
